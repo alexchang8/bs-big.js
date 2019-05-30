@@ -1,0 +1,22 @@
+{
+  "name": "bs-big.js",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "test": "npm run build && jest"
+  },
+  "keywords": [
+    "BuckleScript",
+    "Reason",
+    "Reasonml"
+  ],
+  "author": "Alexander P Chang",
+  "license": "MIT",
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.8",
+    "big.js": "^5.2.2",
+    "bs-platform": "^5.0.4"
+  }
+}
