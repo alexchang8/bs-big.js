@@ -105,6 +105,8 @@ let toPrecision x ?dp () =
   try_wrap (fun () -> toPrecisionExn x ?dp ()) "[big.js] Invalid precision"
     Invalid_precision
 
+external valueOf: t -> string = "" [@@bs.send]
+
 external toString: t -> string = "" [@@bs.send]
 
 external toJson: t -> string = "" [@@bs.send]

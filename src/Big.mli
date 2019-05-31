@@ -103,6 +103,8 @@ val toPrecision: t -> ?dp:int -> unit -> string
 
 val toString: t -> string
 
+val valueOf: t-> string
+
 val toJson: t -> string
 
 val c: t -> int array
