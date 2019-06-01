@@ -1,5 +1,5 @@
 {
-  "name": "bs-big",
+  "name": "bs-big.js",
   "version": "1.0.0",
   "scripts": {
     "clean": "bsb -clean-world",
@@ -22,7 +22,7 @@
     "big.js": "^5.2.2",
     "bs-platform": "^5.0.4"
   },
-  "description": "Work in progress for bindings to big.js.",
+  "description": "Bucklescript bindings to big.js.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
