@@ -14,6 +14,21 @@ Bucklescript bindings to [big.js](https://github.com/MikeMcl/big.js/), a library
 ```
 
 ## Usage
+Big numbers of type `Big.t` can be created using `Big.fromInt`, `Big.fromString` or `Big.fromFloat`. Arithmetic can
+then be done using the pipe-first `|.` syntax. For example:
+
+```Reason
+Big.setDP(10); //set decimal places
+Big.setRM(1); //set rounding mode
+let x = Big.fromInt(2);
+let y = Big.fromInt(3);
+let z = x |. Big.div(y);
+let _ = z |. Big.toString // "0.6666666667"
+let _ = z |. Big.sqrt |. Big.toString // "0.8164965809"
+let _ = z |. Big.pow(-3) |. Big.toString // "3.3749999995"
+let _ = z |. Big.times(z) |. Big.toString // "0.44444444448888888889"
+let _ = z |. Big.times(z) |. Big.round(~dp=10, ()) |. Big.toString // "0.4444444445"
+```
 
 
 ## Documentation
