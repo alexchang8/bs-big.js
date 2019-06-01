@@ -99,10 +99,10 @@ external toExponential: t -> ?dp:int -> unit -> string = "" [@@bs.send]
 
 external toFixed: t -> ?dp:int -> unit -> string = "" [@@bs.send]
 
-external toPrecisionExn: t -> ?dp:int -> unit -> string = "toPrecision" [@@bs.send]
+external toPrecisionExn: t -> ?sd:int -> unit -> string = "toPrecision" [@@bs.send]
 
-let toPrecision x ?dp () =
-  try_wrap (fun () -> toPrecisionExn x ?dp ()) "[big.js] Invalid precision"
+let toPrecision x ?sd () =
+  try_wrap (fun () -> toPrecisionExn x ?sd ()) "[big.js] Invalid precision"
     Invalid_precision
 
 external valueOf: t -> string = "" [@@bs.send]
