@@ -1,6 +1,6 @@
 {
-  "name": "bs-big.js",
-  "version": "0.0.1",
+  "name": "bs-big",
+  "version": "1.0.0",
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
@@ -14,9 +14,25 @@
   ],
   "author": "Alexander P Chang",
   "license": "MIT",
+  "peerDependencies": {
+    "big.js": "^5.2.2"
+  },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.8",
     "big.js": "^5.2.2",
     "bs-platform": "^5.0.4"
-  }
+  },
+  "description": "Work in progress for bindings to big.js.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexchang8/bs-big.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexchang8/bs-big.js/issues"
+  },
+  "homepage": "https://github.com/alexchang8/bs-big.js#readme"
 }
