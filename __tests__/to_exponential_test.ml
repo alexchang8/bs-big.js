@@ -1,7 +1,7 @@
 open Jest
 
 let () =
-  describe "to_exp_test" (fun () ->
+  describe "to_exp_tests" (fun () ->
   let open Expect in
 
   let to_exp_test_opt =
