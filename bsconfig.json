@@ -1,6 +1,6 @@
 {
   "name": "bs-big.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "bsc-flags": ["-bs-super-errors"],
   "sources": [
     {
