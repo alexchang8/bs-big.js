@@ -92,3 +92,4 @@ typings/
 lib/
 .merlin
 __tests__/
+.vscode

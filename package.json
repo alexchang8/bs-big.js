@@ -23,10 +23,6 @@
     "bs-platform": "^5.0.4"
   },
   "description": "Bucklescript bindings to big.js.",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexchang8/bs-big.js.git"
