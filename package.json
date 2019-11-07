@@ -18,9 +18,9 @@
     "big.js": "^5.2.2"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.8",
+    "@glennsl/bs-jest": "^0.4.9",
     "big.js": "^5.2.2",
-    "bs-platform": "^5.0.4"
+    "bs-platform": "^5.2.1"
   },
   "description": "Bucklescript bindings to big.js.",
   "repository": {
