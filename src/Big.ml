@@ -56,48 +56,48 @@ let getNE () = neGet bigJsObj
 
 let getPE () = peGet bigJsObj
 
-external abs: t -> t = "" [@@bs.send]
+external abs: t -> t = "abs"[@@bs.send]
 
-external cmp: t -> t -> int = "" [@@bs.send]
+external cmp: t -> t -> int = "cmp"[@@bs.send]
 
 external divExn: t -> t -> t = "div" [@@bs.send]
 
 let div x y =
   try_wrap (fun () -> divExn x y) "[big.js] Division by zero" Div_by_zero
 
-external eq: t -> t -> bool = "" [@@bs.send]
+external eq: t -> t -> bool = "eq"[@@bs.send]
 
-external gt: t -> t -> bool = "" [@@bs.send]
+external gt: t -> t -> bool = "gt"[@@bs.send]
 
-external gte: t -> t -> bool = "" [@@bs.send]
+external gte: t -> t -> bool = "gte"[@@bs.send]
 
-external lt: t -> t -> bool = "" [@@bs.send]
+external lt: t -> t -> bool = "lt"[@@bs.send]
 
-external lte: t -> t -> bool = "" [@@bs.send]
+external lte: t -> t -> bool = "lte"[@@bs.send]
 
-external minus: t -> t -> t = "" [@@bs.send]
+external minus: t -> t -> t = "minus"[@@bs.send]
 
 external modExn: t -> t -> t = "mod" [@@bs.send]
 
 let mod_ x y =
   try_wrap (fun () -> modExn x y) "[big.js] Division by zero" Div_by_zero
 
-external plus: t -> t -> t = "" [@@bs.send]
+external plus: t -> t -> t = "plus"[@@bs.send]
 
-external pow: t -> int -> t = "" [@@bs.send]
+external pow: t -> int -> t = "pow"[@@bs.send]
 
-external round: t -> ?dp:int -> ?rm:int -> unit -> t = "" [@@bs.send]
+external round: t -> ?dp:int -> ?rm:int -> unit -> t = "round"[@@bs.send]
 
 external sqrtExn: t -> t = "sqrt" [@@bs.send]
 
 let sqrt x =
   try_wrap (fun () -> sqrtExn x) "[big.js] No square root" No_square_root
 
-external times: t -> t -> t = "" [@@bs.send]
+external times: t -> t -> t = "times"[@@bs.send]
 
-external toExponential: t -> ?dp:int -> unit -> string = "" [@@bs.send]
+external toExponential: t -> ?dp:int -> unit -> string = "toExponential"[@@bs.send]
 
-external toFixed: t -> ?dp:int -> unit -> string = "" [@@bs.send]
+external toFixed: t -> ?dp:int -> unit -> string = "toFixed"[@@bs.send]
 
 external toPrecisionExn: t -> ?sd:int -> unit -> string = "toPrecision" [@@bs.send]
 
@@ -105,11 +105,11 @@ let toPrecision x ?sd () =
   try_wrap (fun () -> toPrecisionExn x ?sd ()) "[big.js] Invalid precision"
     Invalid_precision
 
-external valueOf: t -> string = "" [@@bs.send]
+external valueOf: t -> string = "valueOf"[@@bs.send]
 
-external toString: t -> string = "" [@@bs.send]
+external toString: t -> string = "toString"[@@bs.send]
 
-external toJson: t -> string = "" [@@bs.send]
+external toJson: t -> string = "toJson"[@@bs.send]
 
 let c = cGet
 
